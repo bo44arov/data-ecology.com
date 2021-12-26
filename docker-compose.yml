@@ -1,0 +1,17 @@
+networks:
+  web:
+
+services:
+  hoe-jupyter:
+    hostname: hoe-jupyter
+    image: bo44arov/hoe-notebook
+    command: start.sh jupyter lab --LabApp.token='' --NotebookApp.base_url=/jupyter
+    networks:
+      - web
+  
+  hoe-site:
+    image: bo44arov/hoe-site
+    ports:
+      - 80:80
+    networks:
+      - web
