@@ -8,6 +8,7 @@ services:
     command: start.sh jupyter lab --LabApp.token='' --NotebookApp.base_url=/jupyter
     networks:
       - web
+    restart: always
   
   hoe-site:
     image: bo44arov/hoe-site
@@ -15,3 +16,4 @@ services:
       - 80:80
     networks:
       - web
+    restart: always

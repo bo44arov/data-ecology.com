@@ -69,7 +69,7 @@ gulp.task("replacePath", function () {
     .src("./*/pages/**/*.html", {
       base: "./",
     })
-    .pipe(replace('src="assets/images/', 'src="../../../assets/images/'))
+    .pipe(replace('src="assets/images/', 'src="../../assets/images/'))
     .pipe(replace('href="pages/', 'href="../../pages/'))
     .pipe(
       replace(
@@ -83,7 +83,7 @@ gulp.task("replacePath", function () {
     .src("./*/index.html", {
       base: "./",
     })
-    .pipe(replace('src="assets/images/', 'src="../assets/images/'))
+    .pipe(replace('src="assets/images/', 'src="assets/images/'))
     .pipe(
       replace(
         'href="documentation',
