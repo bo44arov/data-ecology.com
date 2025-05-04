@@ -4,4 +4,5 @@ disable internet acess for Jupyter container
 172.18.0.3
 
 [root@ip-172-31-22-198 ~]# sudo iptables -I DOCKER-USER -s 172.18.0.3 -d 0.0.0.0/0 -j DROP
+
 [root@ip-172-31-22-198 ~]# sudo iptables -I DOCKER-USER -s 172.18.0.3 -d 172.18.0.0/16 -j ACCEPT
